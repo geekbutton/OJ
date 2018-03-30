@@ -1,3 +1,3 @@
 # OJ
 
-Exercises of HackerRank
+Exercises of Data Structures
