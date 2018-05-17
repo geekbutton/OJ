@@ -34,6 +34,7 @@ public:
 			faster = faster->next->next;			//快速指针一次移动两个位置
 
 		}
+
 		return true;
 	}
 };
