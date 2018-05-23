@@ -2,14 +2,12 @@
 //
 
 /*
-239. 滑动窗口最大值
+692. 前K个高频单词
 
-https://leetcode-cn.com/problems/sliding-window-maximum/description/
+https://leetcode-cn.com/problems/top-k-frequent-words/description/
 
-给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。
-你只可以看到在滑动窗口 k 内的数字。滑动窗口每次只向右移动一位。
-返回滑动窗口最大值。
-你可以假设 k 总是有效的，1 ≤ k ≤ 输入数组的大小，且输入数组不为空。
+给一非空的单词列表，返回前 k 个出现次数最多的单词。
+返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出现频率，按字母顺序排序。
 */
 
 class Solution {
@@ -33,13 +31,10 @@ public:
 				flag = value;
 				result.insert(result.end(), ss.begin(), ss.end());
 				ss.clear();
-				ss.insert(iq.top().second);
-				iq.pop();
-				--k;
 				continue;
 			}
 			int count = 1;
-			while (flag==value) {
+			while (flag==value && iq.size()!=0) {
 				ss.insert(iq.top().second);
 				iq.pop();
 				value = iq.top().first;
