@@ -48,8 +48,8 @@ int bs_row(int& l, int& r, int col, vector<vector<int>>& matrix, int target) {
 		//∑Ò‘Ú∑µªÿ2
 		if (r < 0)
 			return 0;
-		if (matrix[r][col] < target)
-			return 2;
+		//if (matrix[r][col] < target)
+		return 2;
 	}
 	int mid = (l + r) / 2;
 	if (matrix[mid][col] == target)
