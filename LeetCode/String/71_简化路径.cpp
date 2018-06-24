@@ -22,7 +22,7 @@ public:
 			if (tmp == ".." and !stk.empty()) stk.pop_back();
 			else if (tmp != "..") stk.push_back(tmp);
 		}
-		for (auto str : stk) res += "/" + str;
+		for (auto str : stk) res += "/" + str;		//×¢ÒâÌí¼Ó'/'
 		return res.empty() ? "/" : res;
 	}
 };
